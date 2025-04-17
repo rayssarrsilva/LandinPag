@@ -149,9 +149,7 @@
 
   <!-- Stripe JS (carrega antes) -->
   <script src="https://js.stripe.com/v3/"></script>
-
-  <!-- Script do Stripe -->
-  <script src="https://js.stripe.com/v3/"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const stripe = Stripe('pk_test_51REzh5GhxzR8qqTzMxowGN63vXTf5JpF7n1iY8GsidNBz27aGK4DJakmIlWpj36epbQN7TbqMtHKuzGIn72rkYI300Rcw2bCgW');
@@ -166,8 +164,6 @@
               quantity: 1
             }],
             mode: 'payment',
-            paymentMethodTypes: ['card'], // <- Adicionado para reforçar método de pagamento
-            billingAddressCollection: 'auto', // <- Adicionado para melhorar segurança e compatibilidade
             successUrl: 'https://neon-malabi-ea7f1a.netlify.app/obrigado.html',
             cancelUrl: 'https://neon-malabi-ea7f1a.netlify.app/cancelado.html'
           }).then(function (result) {
