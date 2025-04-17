@@ -166,8 +166,10 @@
               quantity: 1
             }],
             mode: 'payment',
+            paymentMethodTypes: ['card'], // <- Adicionado para reforçar método de pagamento
+            billingAddressCollection: 'auto', // <- Adicionado para melhorar segurança e compatibilidade
             successUrl: 'https://neon-malabi-ea7f1a.netlify.app/obrigado.html',
-            cancelUrl: 'https://neon-malabi-ea7f1a.netlify.app/cancelado.html'
+            cancelUrl: 'https://neon-malabi-ea7f1a.netlify.app/index.html'
           }).then(function (result) {
             if (result.error) {
               alert(result.error.message);
