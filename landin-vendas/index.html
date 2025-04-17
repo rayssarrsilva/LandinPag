@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Use palavras que alguém realmente buscaria no Google-->
+  <title>Landing Page de Vendas</title>
+  <meta name="description" content="Transforme sua rotina com [nome do produto]. Entrega rápida, alta qualidade e aprovação dos clientes. Garanta o seu agora!"> 
+  <meta property="og:title" content="Landing Page de Vendas">
+  <meta property="og:description" content="Landing page moderna e responsiva para apresentar seu produto, captar leads e aumentar conversões.">
+  <meta property="og:url" content="https://seudominio.com">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/faviconc.png" type="image/x-icon"> <!--favicon: ícone pequenininho que aparece na aba do navegador quando você abre um site-->
+  <style>
+    .animate-scroll-x {
+      display: flex;
+      width: max-content;
+      animation: scroll-x 60s linear infinite;
+    }
+  
+    @keyframes scroll-x {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>   
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Hero Section - Benefícios claros -->
+  <section class="py-44 flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600 text-white" id="hero">
+    <div class="text-center px-4" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Transforme sua vida com nosso produto!</h1>
+      <p class="text-xl mb-6">Resultados reais. Garantia de satisfação. Comece agora.</p>
+      <button id="checkout-button" class="bg-white text-blue-600 font-bold py-3 px-9 rounded-full hover:bg-gray-300 transition">Quero Comprar</button>
+    </div>
+  </section>
+
+  <!-- Provas Sociais com rolagem automática -->
+  <section class="py-16 px-6 bg-white" id="provas">
+    <div class="w-full text-center px-6">      
+      <h2 class="text-3xl font-semibold mb-12" data-aos="fade-up">O que dizem sobre nós</h2>
+      
+      <!-- Área de rolagem -->
+      <div class="relative overflow-hidden w-full" id="scrollContainer">
+        <div class="flex gap-6" id="scrollContent">
+          <!-- Depoimento 1 - Gatilhos: antecipação, surpresa, benefício inesperado -->
+          <div class="min-w-[240px] flex-shrink-0">
+            <img src="assets/img/celular.jpg" class="rounded-xl shadow-lg mb-2" alt="Imagem de celular">
+            <p class="text-sm text-center font-bold">"Chegou antes do prazo! <br>A câmera me surpreendeu e a bateria dura o dia inteiro. <br>Não esperava tanta qualidade por esse preço!”</p>
+          </div>
+          <!-- Depoimento 2 - identificação pessoal (“meu primeiro”), repetição/ritual (virou costume), confirmação visual (igual à foto)-->
+          <div class="min-w-[240px] flex-shrink-0">
+            <img src="assets/img/cerveja.jpg" class="rounded-xl shadow-lg mb-2" alt="Barril de cerveja">
+            <p class="text-sm text-center font-bold">"Foi meu primeiro barril e já virou tradição. <br>Chegou perfeito e é exatamente como na foto.<br> Agora todo churrasco tem que ter!”</p>
+          </div>
+          <!-- Depoimento 3 - expectativa quebrada (“achei que fosse só mais um”), resultado rápido, validação real-->
+          <div class="min-w-[240px] flex-shrink-0">
+            <img src="assets/img/emcapsulado.jpg" class="rounded-xl shadow-lg mb-2" alt="Encapsulados"> 
+            <p class="text-sm text-center font-bold">Achei que fosse só mais um produto, <br>mas senti diferença já na primeira semana. <br>Realmente funciona!”</p>
+          </div>
+          <!-- Depoimento 4 - Gatilhos: surpresa positiva, reação emocional de quem recebe, qualidade acima do esperado.-->
+          <div class="min-w-[240px] flex-shrink-0">
+            <img src="assets/img/coelho.jpg" class="rounded-xl shadow-lg mb-2" alt="Coelho e ovinhos de pascoa"> <!--nomes de imagens descritivos + textos alternativos reais: melhora acessibilidade + SEO de imagens-->
+            <p class="text-sm text-center font-bold">É ainda mais fofo ao vivo! <br>Dei de presente e a reação foi inesquecível.<br> Qualidade absurda!”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section class="py-16 px-6 bg-gray-100" id="benefits">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-12" data-aos="fade-up">Veja o que você vai conquistar</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-right">
+          <h3 class="text-xl font-bold mb-2">Mais Tempo</h3>
+          <p>Otimize seu dia e aproveite mais a vida.</p>
+        </div>
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2">Mais Lucro</h3>
+          <p>Aumente sua renda aplicando nosso método.</p>
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-xl font-bold mb-2">Mais Liberdade</h3>
+          <p>Trabalhe de onde quiser, quando quiser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section class="py-16 px-6 bg-white" id="form">
+    <div class="max-w-lg mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-center" data-aos="fade-up">Preencha para respondermos suas duvidas!</h2>
+      <form action="https://formspree.io/f/xrbpwbjj" method="POST" class="space-y-4" data-aos="fade-up">
+        <input type="text" name="name" placeholder="Seu nome" required class="w-full p-3 border border-gray-300 rounded" />
+        <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-3 border border-gray-300 rounded" />
+        <textarea name="message" placeholder="Escreva sua dúvida ou pedido" class="w-full p-3 border border-gray-300 rounded"></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Rolagem -->
+  <script>
+    const container = document.getElementById('scrollContainer');
+    const content = document.getElementById('scrollContent');
+
+    let scrollSpeed = 1;
+    let currentPosition = 0;
+
+    function scrollLoop() {
+      const maxScroll = content.scrollWidth - container.offsetWidth;
+
+      currentPosition -= scrollSpeed;
+
+      // Se chegou no fim, volta pro começo
+      if (Math.abs(currentPosition) >= maxScroll) {
+        currentPosition = 0;
+      }
+
+      content.style.transform = `translateX(${currentPosition}px)`;
+      requestAnimationFrame(scrollLoop);
+    }
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const width = rect.width;
+
+      const proximity = mouseX / width;
+      scrollSpeed = 1 + (proximity * 2);
+    });
+
+    scrollLoop();
+  </script>
+
+  <!-- Stripe JS (carrega antes) -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <!-- Script do Stripe -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const stripe = Stripe('pk_test_51REzh5GhxzR8qqTzMxowGN63vXTf5JpF7n1iY8GsidNBz27aGK4DJakmIlWpj36epbQN7TbqMtHKuzGIn72rkYI300Rcw2bCgW');
+
+      const checkoutButton = document.getElementById('checkout-button');
+
+      if (checkoutButton) {
+        checkoutButton.addEventListener('click', function () {
+          stripe.redirectToCheckout({
+            lineItems: [{
+              price: 'price_1REzuDGhxzR8qqTzjKIsw8jG', // Seu ID correto
+              quantity: 1
+            }],
+            mode: 'payment',
+            successUrl: 'http://localhost:8000/landin-vendas/obrigado.html',
+            cancelUrl: 'http://localhost:8000/landin-vendas/cancelado.html'
+          }).then(function (result) {
+            if (result.error) {
+              alert(result.error.message);
+            }
+          });
+        });
+      } else {
+        console.error('Botão com id="checkout-button" não foi encontrado.');
+      }
+    });
+  </script>
+
+</body>
+</html>
