@@ -151,6 +151,7 @@
   <script src="https://js.stripe.com/v3/"></script>
 
   <!-- Script do Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const stripe = Stripe('pk_test_51REzh5GhxzR8qqTzMxowGN63vXTf5JpF7n1iY8GsidNBz27aGK4DJakmIlWpj36epbQN7TbqMtHKuzGIn72rkYI300Rcw2bCgW');
@@ -161,20 +162,18 @@
         checkoutButton.addEventListener('click', function () {
           stripe.redirectToCheckout({
             lineItems: [{
-              price: 'price_1REzuDGhxzR8qqTzjKIsw8jG', // Seu ID correto
+              price: 'price_1REzuDGhxzR8qqTzjKIsw8jG',
               quantity: 1
             }],
             mode: 'payment',
-            successUrl: 'http://localhost:8000/landin-vendas/obrigado.html',
-            cancelUrl: 'http://localhost:8000/landin-vendas/cancelado.html'
+            successUrl: 'https://neon-malabi-ea7f1a.netlify.app/obrigado.html',
+            cancelUrl: 'https://neon-malabi-ea7f1a.netlify.app/cancelado.html'
           }).then(function (result) {
             if (result.error) {
               alert(result.error.message);
             }
           });
         });
-      } else {
-        console.error('Botão com id="checkout-button" não foi encontrado.');
       }
     });
   </script>
