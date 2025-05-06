@@ -10,9 +10,9 @@ Como rodar:
 5. Baixe e use o Live Preview para visualizar o projeto enquanto ve o código ou abra pelo arquivo html direto da pasta onde está salvo o seu projeto no computador
 
 Tecnologias usadas:
-1.HTML
-2.CSS Tailwind
-3.Stripe.js - biblioteca para checkout de pagamentos
-4.Formspree - serviço de envio de formulários por e-mail sem backend.
-5.JavaScript
-6.AOS - biblioteca para animações de rolagem
+HTML, 
+CSS Tailwind, 
+Stripe.js - biblioteca para checkout de pagamentos, 
+Formspree - serviço de envio de formulários por e-mail sem backend, 
+JavaScript, 
+AOS - biblioteca para animações de rolagem
