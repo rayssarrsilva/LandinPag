@@ -14,6 +14,7 @@ Construir uma landing que:
 - **Responde dúvidas essenciais** (FAQ) **antes** do checkout;
 - **Vai direto ao ponto** (sem “scroll infinito”);
 - **Facilita o pagamento** com uma plataforma **confiável e simples** (Stripe).
+- **implementar boas práticas de SEO para que a página seja encontrada facilmente pelo usuário**
 
 ## ✅ Solução
 - **FAQ** visível e objetivo para remover objeções comuns;
