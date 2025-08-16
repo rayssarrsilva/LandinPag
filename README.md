@@ -53,6 +53,8 @@ Construir uma landing que:
 > **Schema.org (opcional):** `FAQPage` e `Product/Offer` podem ser adicionados para rich results.
 
 ---
+![apresentação landingPage](https://github.com/user-attachments/assets/e9bffb0f-44fb-4457-af31-950c891675b8)
+---
 
 ## 🛠️ Como rodar localmente
 Projeto estático.  
@@ -60,3 +62,4 @@ Projeto estático.
 ```bash
 python -m http.server 5500
 # abra http://localhost:5500
+
